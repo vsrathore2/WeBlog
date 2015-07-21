@@ -1,4 +1,6 @@
-﻿using Sitecore.StringExtensions;
+﻿
+using Sitecore.StringExtensions;
+
 
 namespace Sitecore.Modules.WeBlog.Pipelines.GetSummary
 {
@@ -31,7 +33,7 @@ namespace Sitecore.Modules.WeBlog.Pipelines.GetSummary
         public void Process(GetSummaryArgs args)
         {
             if (!OnlyWhenRequired || !args.Summary.StartsWith("<" + WrappingTag + ">"))
-                args.Summary = "<{0}>{1}</{0}>".FormatWith(WrappingTag, args.Summary);
+                args.Summary = "<{0}>{1}</{0}>";//.FormatWith(WrappingTag, args.Summary);
         }
     }
 }

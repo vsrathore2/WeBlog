@@ -1,6 +1,7 @@
 ﻿using Sitecore.Diagnostics;
 using Sitecore.StringExtensions;
 
+
 namespace Sitecore.Modules.WeBlog.Pipelines.CreateComment
 {
     public class DuplicateSubmissionGuard : ICreateCommentProcessor

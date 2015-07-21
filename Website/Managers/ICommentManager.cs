@@ -1,8 +1,9 @@
-﻿using Sitecore.Data;
+﻿
+
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Globalization;
 using Sitecore.Modules.WeBlog.Items.WeBlog;
-
 namespace Sitecore.Modules.WeBlog.Managers
 {
     public interface ICommentManager

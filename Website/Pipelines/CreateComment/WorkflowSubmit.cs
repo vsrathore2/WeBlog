@@ -1,5 +1,6 @@
-﻿using Sitecore.Sites;
+﻿
 
+using Sitecore.Sites;
 namespace Sitecore.Modules.WeBlog.Pipelines.CreateComment
 {
     public class WorkflowSubmit : ICreateCommentProcessor

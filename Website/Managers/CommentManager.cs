@@ -15,7 +15,7 @@ using Sitecore.Modules.WeBlog.Search;
 using Sitecore.Modules.WeBlog.Services;
 using Sitecore.Pipelines;
 using Sitecore.Search;
-#if SC80 || SC81
+#if FEATURE_CONTENT_SEARCH
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Modules.WeBlog.Search.SearchTypes;
@@ -246,7 +246,7 @@ namespace Sitecore.Modules.WeBlog.Managers
                 var blog = ManagerFactory.BlogManagerInstance.GetCurrentBlog(item);
                 if (blog != null)
                 {
-#if SC80 || SC81
+#if FEATURE_CONTENT_SEARCH
                     var indexName = Settings.SearchIndexName;
                     List<CommentItem> result = new List<CommentItem>();
                     if (!string.IsNullOrEmpty(indexName))
