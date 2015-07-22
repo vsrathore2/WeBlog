@@ -259,7 +259,7 @@ namespace Sitecore.Modules.WeBlog.Managers
                     {
                         builder = builder.And(PredicateController.BlogCategory(category));
                     }
-                    var indexresults = context.GetQueryable<EntryResultItem>().Where(builder);
+                    var indexresults = context.GetQueryable<EntryResultItem>().Where(i=>i.Path.Contains(Sitecore.Context.Item.Paths.FullPath)).Where(builder);
                     if (indexresults.Any())
                     {
                         result = indexresults.Select(i => new EntryItem(i.GetItem())).ToList();
